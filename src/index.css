@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Poppins", sans-serif;
+  
+  --color-brand-pink: #fce4ec;
+  --color-brand-pink-dark: #f8bbd0;
+  --color-brand-gold: #d4af37;
+  --color-brand-gold-light: #f1e5ac;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-sans text-gray-800 bg-white;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+.glass-nav {
+  @apply bg-white/80 backdrop-blur-md border-b border-brand-pink;
+}
+
+.btn-primary {
+  @apply bg-brand-gold hover:bg-brand-gold/90 text-white px-8 py-3 rounded-full transition-all duration-300 font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
+}
+
+.btn-secondary {
+  @apply bg-brand-pink hover:bg-brand-pink-dark text-gray-800 px-8 py-3 rounded-full transition-all duration-300 font-medium border border-brand-pink-dark;
+}
+
+.section-title {
+  @apply text-4xl md:text-5xl font-serif text-center mb-4 text-gray-900;
+}
+
+.section-subtitle {
+  @apply text-center text-brand-gold font-medium tracking-widest uppercase text-sm mb-12;
+}
